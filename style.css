@@ -1,0 +1,90 @@
+body {
+  /* Fondo oscuro y moderno */
+  background: linear-gradient(135deg, #1e1e1e, #333333);
+  font-family: 'Roboto', sans-serif; /* Fuente más limpia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  /* Contenedor principal con fondo oscuro y bordes suaves */
+  background: #282828;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), /* Sombra más pronunciada */
+              0 0 0 5px rgba(255, 255, 255, 0.05); /* Borde sutil */
+  width: 300px; /* Un poco más ancha */
+}
+
+#display {
+  /* Pantalla de visualización */
+  width: 100%;
+  height: 70px; /* Más alta */
+  font-size: 36px; /* Letra más grande */
+  text-align: right;
+  padding: 0 15px; /* Relleno interior para el texto */
+  border: none;
+  background-color: #1a1a1a; /* Fondo muy oscuro */
+  color: #f0f0f0; /* Texto claro */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8); /* Sombra interior para profundidad */
+  box-sizing: border-box; /* Asegura que el padding no cambie el ancho */
+}
+
+
+.buttons {
+  /* Contenedor de botones */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* Espacio más amplio entre botones */
+}
+
+button {
+  /* Estilo general de los botones */
+  font-size: 24px;
+  padding: 20px 0; /* Más alto */
+  border: none;
+  border-radius: 15px;
+  background: #444444; /* Fondo de botón gris oscuro */
+  color: #ffffff; /* Texto blanco */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Estilos para botones especiales (operadores, igual) */
+.operator {
+  background: #ff9500; /* Naranja para operadores */
+  color: #ffffff;
+}
+
+.equals {
+  background: #1abc9c; /* Turquesa para el igual */
+  color: #ffffff;
+}
+
+/* Efectos al pasar el ratón */
+button:hover {
+  background: #555555; /* Un gris más claro al pasar el ratón */
+  transform: translateY(-2px); /* Un sutil levantamiento */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.operator:hover {
+  background: #ffb347; /* Naranja más claro */
+}
+
+.equals:hover {
+  background: #1dd2b3; /* Turquesa más claro */
+}
+
+/* Efectos al hacer clic */
+button:active {
+  background: #333333; /* Color más oscuro al presionar */
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) inset;
+}
